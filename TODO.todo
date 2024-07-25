@@ -1,0 +1,48 @@
+API KEY:
+    1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b
+
+Cloud Storage:
+    ☐ GCS Encryption on objects
+    ☐ Retention Policy
+    ☐ Auto Class movements
+
+Pub/Sub:
+    ☐ Pub/Sub Schema on topics
+
+Steps:
+    - Created GCS Bucket
+    - Created a topic in pub/Sub
+    - Found a service agent linked with storage
+        command[gcloud storage service-agent --project=<Project ID>]
+    - Linked the permission to publish events to the same service agent in pub/sub -> Permissions -> Add principal
+    - Initiated the notification channel
+        command[gcloud storage buckets notifications create gs://<Bucket Name> --topic=<Topic Name>]
+    - To check if the notifications are enabled
+        command[gsutil notification list gs://eventsource-dev]
+
+        {
+            "kind": "storage#object",
+            "id": "cuckoo_dev/1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b/session_id_micserkdnfaoknf/data.json/1721859084542317",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/cuckoo_dev/o/1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b%2Fsession_id_micserkdnfaoknf%2Fdata.json",
+            "name": "1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b/session_id_micserkdnfaoknf/data.json",
+            "bucket": "cuckoo_dev",
+            "generation": "1721859084542317",
+            "metageneration": "1",
+            "contentType": "application/json",
+            "timeCreated": "2024-07-24T22:11:24.545Z",
+            "updated": "2024-07-24T22:11:24.545Z",
+            "storageClass": "STANDARD",
+            "timeStorageClassUpdated": "2024-07-24T22:11:24.545Z",
+            "size": "21106",
+            "md5Hash": "w2Spdop54hX2DBq79l9aYQ==",
+            "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/cuckoo_dev/o/1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b%2Fsession_id_micserkdnfaoknf%2Fdata.json?generation=1721859084542317&alt=media",
+            "crc32c": "A+9zoQ==",
+            "etag": "CO3C2fjYwIcDEAE="
+          }
+
+PPT:
+    ☐ Pricing comparison
+    ☐ Extensibility
+
+Deploy:
+    ☐ Firestore-key should be placed

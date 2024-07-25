@@ -1,0 +1,14 @@
+### Hello, World - Test using REST-API HTTP client
+
+GET http://localhost:4000 HTTP/1.1
+content-type: application/json
+
+
+### Status
+GET http://localhost:4000/status HTTP/1.1
+content-type: application/json
+
+## Response
+{
+  "message": "Hello, World!"
+}
