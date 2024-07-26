@@ -1,6 +1,10 @@
 API KEY:
     1fI4SxneQu26epS9hNVH9OEyVwwTyAH5V71i4DUJkSG6GaG66NPOfjMWh6rm1c0b
 
+GitHub URI:
+    git+https://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:x-oauth-basic@github.com/abhisheksaxenaa/trace-event-js.git
+    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
+
 Cloud Storage:
     ☐ GCS Encryption on objects
     ☐ Retention Policy
@@ -43,6 +47,9 @@ Steps:
 PPT:
     ☐ Pricing comparison
     ☐ Extensibility
+    ☐ Storage pricing in pub sub
+    ☐ Storage pricing in GCS
+    ☐ Comparison points why we need GCS?
 
 Deploy:
     ☐ Firestore-key should be placed

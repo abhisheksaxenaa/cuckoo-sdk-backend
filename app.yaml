@@ -1,0 +1,42 @@
+runtime: nodejs20
+env_variables:
+  NODE_ENV: development # Change it as you may need
+  APP_NAME: cuckoo-backend # Change it as you may need
+  APP_VERSION: 1.0.0 # Change it as you may need
+  APP_DESCRIPTION: 'Cuckoo Development API' # Change it as you may need
+  APP_SECRET: 
+  PORT: 4000 # Change it as you may need
+
+
+  # Database configuration
+  DB_HOST: 127.0.0.1 # IPv4
+  DB_PORT: 5432 # Postgres default port
+  DB_NAME: nestjs_db # Change it as you may need
+  DB_USER: developer # Change it as you may need
+  DB_PASSWORD: developer123 # Change it as you like
+
+  # API configuration
+  API_SECRET: super_secret # Change it as you like
+
+  # JWT configuration
+  JWT_SECRET: super_secret_007 # Change it as you like
+  JWT_EXPIRES_IN: '12h' # Change it as you like
+
+  # Firestore Key
+  SA_KEY: 'firestore-key'
+
+  # Google Cloud 
+  GC_PROJECT_ID: 'lloyds-hack-grp-50'
+
+  ## GCS Storage account
+  GCS_BUCKET_NAME: 'cuckoo_dev'
+  GCS_CLIENT_EMAIL: 'service-account-dataflow-2@lloyds-hack-grp-50.iam.gserviceaccount.com'
+  GCS_CLIENT_PRIVATE_KEY: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0IEi/ub/rJPLB\nBjKp+5q+zehNHZA05lHRPHdjdhyqdbGcZBWjF77vXkEAvcj/gS713DfWbBhEDJ/W\neA1wtn3VQMXffsEXp45xnJ59sALrqZYEV5+IhZhyauiZ4L+iX3T0f8SuT7HzKajN\nGJDdZSHFumD/Yc2AKtrPHh1TXmNIFp3gH6mTAZS4PWgF8vbVNUAA8cPNhl15qNIq\npwJxg624tZaOGTn6Sl+dTSTPuwuk7Tmpm5JinkigxTp+KrrRpjbeG4hzkrSRwTtQ\nPIxDQaz3IJbXVp2UH2K3g6hZ4HJIsTYSVF/kr0TK9+NBl+2ieOHkfhF5q5wy8ouA\nbXdpPQFZAgMBAAECggEABE66VqVrRsULLh0HFKQQ8wurCL8SfgVdAwcyZrVCIbxv\nSylkkBInDYPgQ5OGTT/qXtRNnInYubXgk6kqzx16HGGwabQXC4kFAcgITUKqizay\nwPdUeBgTyXavidCDXK9yNU+h5TZAL+u43vC9tCGxQVB/9dOBrdU4htf2RRJehvCD\nOPgJAuzSMMJNdxmqQCR13V+scupvEzYk7Z06fP32A1SyTj9CV0rlkExbseo+YjwT\nk+Tfd5tCxXA6V4V+60BA1lMoyYfDvbIuXSWbUx5kH8WbYSlb/OWhvqj6EDXpo4d3\nuSEmMojBpRtorimMV4PQBdBe2GsuAif9BjaSx36A4QKBgQDnTg+HfV9l+dN45YJ4\nrPDpxhcIQdkNAh9IC/01aZ6vHZLFeQYh+Td/OXTCZouWirGxnf56i4EPKeNpak9B\noDt+7XHOi0Q8hsN65uoRe9KeX7P9NJ/aPH5ZGjjKGvkv24JkRJJA6mtRUCcUQWNo\npzJTA0HxtXdNTNg5oLbmdrmE6QKBgQDHW2xicsRC/D2MumkA3Q289Yy5aFURzQ11\nFoLojxw+oTonDQ9ndls4Zni1BJ3eoDi0HLDr0pXARZfmG6742LF4/9BMO3CarZzB\ntJZk75S/6j4QOEwoNLHhLhnelScR12ErdqKqMqrUBIFgck3WRoLI7YDIsq6AQV8Z\nSIXZqjqS8QKBgACskpEDhYanjr04dgPiBSW5RRHqFzbZfbvZBRjlwOejv2zB6Imq\nz0WYpkV2xQtgRhpNapNy2qJvrdD91VNMoz/Ac2d1snI2tlUiXSZF5Rw/DSg8wgaB\nzKB32hiEsZs5GY0vQfncdQmcoTCG7EI+0n+5b7TDoaBhC/RHCqFrUSkZAoGAToR/\nh7bT/d4DD+5LdP+bbZT4u/2Po9czOa6IGLhk03YExWSrcIB5JRmW6RTMaOaJ7sZu\nGDN0r6m5TfQRUglmvNVkYOH4U7OVTeWmZlLGL2A+2XyS4jL+7EWQAs6T+L7vkoLD\nRm12QtMTcb0TUxWqZSDF3EYj3Hfi0L5zmWsmbsECgYB6bjiNxVdMwGQjGP0J3fkH\nyf80M88bX29AuBOKsOzKelS7X4OByuRZ5yQL3uCNYQz+SDTEkx1OfICkgj9xtaWa\nNIu37cdj7dxMq8KHL0Omy0HN8f0CDeHwu0ptUH6pbBgjMpP1HiiazDLqid2JjqF/\nEaGy6qLGovSt0b8MviERgw: : \n-----END PRIVATE KEY-----\n"
+
+handlers:
+- url: /.*
+  script: auto
+
+resources:
+  cpu: 1
+  memory_gb: 1
